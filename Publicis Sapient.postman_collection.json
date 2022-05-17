@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "4787221b-e70b-4196-84f7-b28a55891444",
+		"name": "Publicis Sapient",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create a new CC",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"hello\",\n    \"card_number\": 4129708163872472,\n    \"limit\": 10200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/credit-card/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"credit-card",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all CC documents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/credit-card/view",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"credit-card",
+						"view"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
