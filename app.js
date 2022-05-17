@@ -2,13 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
+require('dotenv').config()
 
 mongoose.Promise = global.Promise;
 
 /**********************************************************
  * @DESC        -   Database Configuration and Connection
 ***********************************************************/
-const database = 'mongodb+srv://denzilgupta:ugCjtfAskKafNTWM@cluster0.7tbap.mongodb.net/publicis_sapient?retryWrites=true&w=majority';
+const database = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@${process.env.SERVER}/${process.env.DATABASE}?retryWrites=true&w=majority`;
 
 mongoose
     .connect(database, { useNewUrlParser: true, useUnifiedTopology: true })
