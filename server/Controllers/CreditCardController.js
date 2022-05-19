@@ -58,7 +58,7 @@ exports.create_new_credit_card = async (request, response, next) => {
                 limit: limit
             });
             if (new_cc_info) {
-                return response.status(201).json({ data: new_cc_info, error: null, success: false });
+                return response.status(201).json({ data: new_cc_info, error: null, success: true });
             } else {
                 return response.status(400).json({ data: null, error: error.message, success: false });
             }
